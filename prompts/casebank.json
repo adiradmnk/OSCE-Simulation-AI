@@ -1,0 +1,1897 @@
+{
+  "metadata": {
+    "platform": "CliniThink",
+    "version": "1.1-MVP",
+    "total_systems": 9,
+    "total_cases": 16,
+    "purpose": "Case bank OSCE untuk simulasi clinical reasoning mahasiswa kedokteran"
+  },
+  "systems": [
+    {
+      "system": "Respirasi",
+      "system_code": "RESP",
+      "cases": [
+        {
+          "case_id": "RESP-001",
+          "title": "Batuk kronik dengan penurunan berat badan",
+          "difficulty": "intermediate",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Tn. A",
+            "age": 45,
+            "gender": "Laki-laki",
+            "chief_complaint": "Batuk berdahak sejak 3 minggu yang lalu, disertai demam hilang timbul dan penurunan berat badan",
+            "vital_signs": {
+              "blood_pressure": "110/70 mmHg",
+              "heart_rate": "92 x/menit",
+              "respiratory_rate": "22 x/menit",
+              "temperature": "37.8 C",
+              "spo2": "96%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Tuberkulosis Paru",
+            "enabling_conditions": [
+              "Usia dewasa produktif",
+              "Riwayat kontak dengan penderita TB (tinggal serumah/lingkungan kerja)",
+              "Status gizi kurang / penurunan berat badan signifikan",
+              "Imunokompromais (HIV, DM, penggunaan steroid jangka panjang)",
+              "Tinggal di lingkungan padat penduduk / ventilasi buruk",
+              "Riwayat merokok"
+            ],
+            "fault_pathophysiology": "Infeksi Mycobacterium tuberculosis yang menyebabkan reaksi inflamasi granulomatosa kronik pada parenkim paru, umumnya pada segmen apikal-posterior lobus atas akibat tekanan oksigen yang lebih tinggi di area tersebut yang mendukung pertumbuhan bakteri aerobik obligat ini.",
+            "consequences": {
+              "symptoms": [
+                "Batuk berdahak >2 minggu (gejala kardinal)",
+                "Demam subfebris terutama malam hari (demam hilang timbul)",
+                "Penurunan berat badan tanpa sebab jelas",
+                "Berkeringat malam (night sweats)",
+                "Nafsu makan menurun",
+                "Hemoptisis (pada kasus lanjut)",
+                "Sesak napas (pada kasus lanjut dengan kerusakan parenkim luas)"
+              ],
+              "physical_signs": [
+                "Ronki basah di apex paru",
+                "Suara napas bronkial pada area konsolidasi",
+                "Limfadenopati servikal (bila ada penyebaran limfogen)"
+              ],
+              "diagnostic_findings": [
+                "BTA sputum SPS positif (gold standard awal)",
+                "Foto toraks: infiltrat di apex, kavitas, atau konsolidasi lobus atas",
+                "TCM (Tes Cepat Molekuler) / GeneXpert positif Mycobacterium tuberculosis",
+                "Kultur sputum positif (gold standard definitif, 6-8 minggu)"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Pneumonia Komunitas",
+              "distinguishing_features": "Onset lebih akut (hari, bukan minggu), demam tinggi mendadak, tidak ada riwayat kontak TB, foto toraks konsolidasi lobar bukan apikal",
+              "relevance_note": "Sering tertukar karena gejala respirasi overlap tinggi dengan TB pada fase awal"
+            },
+            {
+              "diagnosis": "Bronkitis Kronik",
+              "distinguishing_features": "Biasanya pada perokok berat, batuk produktif kronik tanpa demam signifikan atau penurunan berat badan drastis",
+              "relevance_note": "Perlu dibedakan terutama pada pasien dengan riwayat merokok"
+            },
+            {
+              "diagnosis": "Karsinoma Paru",
+              "distinguishing_features": "Usia lebih tua, riwayat merokok berat jangka panjang, hemoptisis lebih prominent, penurunan berat badan progresif tanpa demam",
+              "relevance_note": "Penting dipertimbangkan pada pasien usia >40 tahun dengan riwayat merokok untuk mencegah missed diagnosis"
+            },
+            {
+              "diagnosis": "Bronkiektasis",
+              "distinguishing_features": "Batuk produktif kronik dengan sputum purulen banyak, riwayat infeksi paru berulang",
+              "relevance_note": "Diferensial yang sering terlewat karena gejala mirip TB kronik"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan durasi dan karakteristik batuk (produktif/non-produktif, warna dahak)",
+              "Menanyakan riwayat kontak dengan penderita TB",
+              "Menanyakan riwayat demam dan pola demam (terutama malam hari)",
+              "Menanyakan riwayat penurunan berat badan dan kuantifikasi",
+              "Menanyakan riwayat berkeringat malam",
+              "Menanyakan riwayat merokok",
+              "Menanyakan riwayat penyakit komorbid (DM, HIV)",
+              "Menanyakan riwayat pengobatan TB sebelumnya (untuk skrining resistensi)",
+              "Menanyakan kondisi tempat tinggal (ventilasi, kepadatan hunian)"
+            ],
+            "physical_exam_items": [
+              "Inspeksi umum: status gizi, sesak napas",
+              "Palpasi: pembesaran kelenjar getah bening leher",
+              "Perkusi paru area apex",
+              "Auskultasi paru: ronki, suara napas bronkial"
+            ],
+            "expected_workup": [
+              "Pemeriksaan BTA sputum SPS",
+              "Foto toraks PA",
+              "TCM/GeneXpert bila tersedia"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "RESP-001-SCT1",
+              "scenario_addition": "Pasien mengaku tinggal bersama kakak yang sedang menjalani pengobatan TB 2 bulan terakhir",
+              "hypothesis_tested": "Tuberkulosis Paru",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Riwayat kontak erat dengan penderita TB aktif sangat meningkatkan probabilitas pretest TB pada pasien dengan gejala respirasi kronik"
+            },
+            {
+              "item_id": "RESP-001-SCT2",
+              "scenario_addition": "Hasil foto toraks menunjukkan infiltrat di lobus bawah tanpa kavitas",
+              "hypothesis_tested": "Tuberkulosis Paru",
+              "expert_panel_modal_response": "-1",
+              "rationale": "Lokasi infiltrat di lobus bawah tanpa kavitas kurang tipikal untuk TB primer dewasa, lebih mengarah ke pneumonia komunitas, meski tidak menyingkirkan TB sepenuhnya"
+            },
+            {
+              "item_id": "RESP-001-SCT3",
+              "scenario_addition": "Pasien diketahui menderita DM tipe 2 tidak terkontrol selama 5 tahun",
+              "hypothesis_tested": "Tuberkulosis Paru",
+              "expert_panel_modal_response": "+1",
+              "rationale": "DM tidak terkontrol adalah faktor risiko imunokompromais yang meningkatkan kerentanan terhadap infeksi TB"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Tinggi - mahasiswa cenderung langsung menyimpulkan pneumonia karena demam dan batuk tanpa menggali durasi gejala dan riwayat kontak",
+            "anchoring_risk": "Tinggi - jika mahasiswa sudah curiga pneumonia di awal anamnesis, sering tidak menggali riwayat kontak TB meski relevan"
+          }
+        },
+        {
+          "case_id": "RESP-002",
+          "title": "Sesak napas mendadak pada lansia",
+          "difficulty": "intermediate",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Ny. B",
+            "age": 68,
+            "gender": "Perempuan",
+            "chief_complaint": "Sesak napas mendadak sejak 2 hari yang lalu, demam tinggi, batuk berdahak warna kuning kehijauan",
+            "vital_signs": {
+              "blood_pressure": "100/60 mmHg",
+              "heart_rate": "110 x/menit",
+              "respiratory_rate": "28 x/menit",
+              "temperature": "38.9 C",
+              "spo2": "91%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Pneumonia Komunitas (Community-Acquired Pneumonia)",
+            "enabling_conditions": [
+              "Usia lanjut (>65 tahun)",
+              "Komorbid: penyakit paru kronik, diabetes, penyakit jantung",
+              "Riwayat infeksi saluran napas atas sebelumnya",
+              "Imobilisasi atau riwayat rawat inap baru-baru ini",
+              "Status imunokompromais",
+              "Riwayat merokok"
+            ],
+            "fault_pathophysiology": "Infeksi akut parenkim paru oleh patogen (tersering Streptococcus pneumoniae) yang menyebabkan respons inflamasi alveolar dengan eksudasi cairan dan sel inflamasi ke dalam alveoli, mengganggu pertukaran gas dan menyebabkan konsolidasi pada pencitraan.",
+            "consequences": {
+              "symptoms": [
+                "Onset akut (jam hingga hari)",
+                "Demam tinggi mendadak",
+                "Batuk produktif dengan sputum purulen",
+                "Sesak napas",
+                "Nyeri dada pleuritik",
+                "Pada lansia: dapat presentasi atipikal seperti perubahan status mental tanpa demam tinggi"
+              ],
+              "physical_signs": [
+                "Takipnea",
+                "Ronki basah kasar fokal",
+                "Suara napas bronkial pada area konsolidasi",
+                "Perkusi redup pada area konsolidasi",
+                "Demam tinggi, takikardia"
+              ],
+              "diagnostic_findings": [
+                "Foto toraks: konsolidasi lobar atau infiltrat patchy",
+                "Leukositosis dengan dominasi neutrofil",
+                "Saturasi oksigen rendah pada kasus berat",
+                "CURB-65 / PSI score untuk stratifikasi risiko"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Eksaserbasi Akut PPOK",
+              "distinguishing_features": "Riwayat PPOK sebelumnya, sputum berubah warna tapi tanpa konsolidasi fokal pada foto toraks",
+              "relevance_note": "Sering overlap pada pasien lansia dengan riwayat merokok"
+            },
+            {
+              "diagnosis": "Gagal Jantung Kongestif Akut",
+              "distinguishing_features": "Ortopnea, edema tungkai, riwayat penyakit jantung, ronki basah bilateral simetris bukan fokal",
+              "relevance_note": "Penting dibedakan karena tata laksana sangat berbeda; sering terjadi premature closure ke pneumonia tanpa mengeksplorasi kemungkinan kardiogenik"
+            },
+            {
+              "diagnosis": "Emboli Paru",
+              "distinguishing_features": "Onset sesak sangat mendadak, nyeri dada pleuritik tajam, faktor risiko trombosis (imobilisasi lama, riwayat DVT), tanpa demam tinggi prominent",
+              "relevance_note": "Diagnosis yang sering terlewat (missed) karena gejala dapat sangat mirip pneumonia pada presentasi awal"
+            },
+            {
+              "diagnosis": "Tuberkulosis Paru dengan Superinfeksi",
+              "distinguishing_features": "Riwayat gejala kronik sebelum perburukan akut, penurunan berat badan progresif",
+              "relevance_note": "Perlu ditanyakan riwayat gejala sebelum 2 hari onset akut untuk menyingkirkan TB yang mengalami eksaserbasi"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan onset dan progresivitas sesak napas",
+              "Menanyakan karakteristik sputum (warna, jumlah)",
+              "Menanyakan nyeri dada dan karakteristiknya (pleuritik atau tidak)",
+              "Menanyakan riwayat penyakit paru kronik sebelumnya",
+              "Menanyakan riwayat penyakit jantung dan gejala gagal jantung (ortopnea, edema)",
+              "Menanyakan faktor risiko trombosis (imobilisasi, perjalanan jauh, riwayat DVT/PE)",
+              "Menanyakan riwayat gejala sebelum onset akut (untuk skrining TB)",
+              "Menanyakan riwayat merokok dan PPOK"
+            ],
+            "physical_exam_items": [
+              "Inspeksi: tanda distres napas, penggunaan otot bantu napas",
+              "Palpasi: ekspansi dada simetris",
+              "Perkusi: area redup vs hipersonor",
+              "Auskultasi: ronki, mengi, suara jantung untuk gallop",
+              "Pemeriksaan edema tungkai dan JVP"
+            ],
+            "expected_workup": [
+              "Foto toraks",
+              "Saturasi oksigen / analisis gas darah bila berat",
+              "Darah lengkap",
+              "EKG untuk menyingkirkan kelainan jantung"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "RESP-002-SCT1",
+              "scenario_addition": "Pasien diketahui memiliki riwayat gagal jantung kongestif dan tampak edema kedua tungkai",
+              "hypothesis_tested": "Pneumonia Komunitas",
+              "expert_panel_modal_response": "-1",
+              "rationale": "Adanya edema tungkai dan riwayat gagal jantung meningkatkan kecurigaan ke arah eksaserbasi gagal jantung, meski tidak menyingkirkan pneumonia karena keduanya dapat koeksis"
+            },
+            {
+              "item_id": "RESP-002-SCT2",
+              "scenario_addition": "Ronki ditemukan terlokalisir hanya di lobus kanan bawah, disertai perkusi redup di area yang sama",
+              "hypothesis_tested": "Pneumonia Komunitas",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Temuan fokal terlokalisir sangat mendukung konsolidasi pneumonia dibanding kondisi yang menyebabkan kelainan difus seperti gagal jantung"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sangat tinggi - kombinasi demam, batuk, sesak pada lansia sangat klasik untuk pneumonia sehingga mahasiswa sering tidak mengeksplorasi diferensial jantung atau emboli paru",
+            "anchoring_risk": "Tinggi - begitu mendengar 'demam + batuk produktif', mahasiswa sering berhenti menggali riwayat kardiovaskular"
+          }
+        },
+        {
+          "case_id": "RESP-003",
+          "title": "Sesak napas episodik dengan riwayat alergi",
+          "difficulty": "basic",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "An. C",
+            "age": 12,
+            "gender": "Laki-laki",
+            "chief_complaint": "Sesak napas dan mengi yang muncul tiba-tiba setelah bermain di lapangan berdebu",
+            "vital_signs": {
+              "blood_pressure": "100/65 mmHg",
+              "heart_rate": "105 x/menit",
+              "respiratory_rate": "26 x/menit",
+              "temperature": "36.8 C",
+              "spo2": "94%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Asma Bronkial (Eksaserbasi Akut)",
+            "enabling_conditions": [
+              "Usia anak hingga dewasa muda",
+              "Riwayat atopi pribadi atau keluarga (rhinitis alergi, dermatitis atopik)",
+              "Riwayat episode serupa berulang",
+              "Pajanan terhadap pencetus (debu, dingin, aktivitas fisik, alergen)",
+              "Riwayat keluarga dengan asma"
+            ],
+            "fault_pathophysiology": "Inflamasi kronik saluran napas yang menyebabkan hiperresponsivitas bronkus terhadap berbagai stimulus, mengakibatkan bronkokonstriksi reversibel, edema mukosa, dan peningkatan produksi mukus saat terpajan pencetus.",
+            "consequences": {
+              "symptoms": [
+                "Sesak napas episodik",
+                "Mengi (wheezing)",
+                "Batuk terutama malam/dini hari atau setelah aktivitas",
+                "Rasa berat di dada",
+                "Gejala memburuk dengan pajanan pencetus spesifik",
+                "Riwayat perbaikan spontan atau dengan bronkodilator"
+              ],
+              "physical_signs": [
+                "Mengi ekspiratoar bilateral",
+                "Ekspirasi memanjang",
+                "Penggunaan otot bantu napas pada eksaserbasi berat",
+                "Hiperinflasi dada pada kasus kronik"
+              ],
+              "diagnostic_findings": [
+                "Spirometri: obstruksi reversibel dengan bronkodilator (FEV1 meningkat >12%)",
+                "Peak flow meter: variabilitas diurnal tinggi",
+                "Eosinofilia pada darah lengkap (bila ada komponen alergi)"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Bronkiolitis",
+              "distinguishing_features": "Lebih sering pada bayi <2 tahun, didahului gejala infeksi saluran napas atas",
+              "relevance_note": "Penting dibedakan berdasarkan usia pasien"
+            },
+            {
+              "diagnosis": "Benda Asing Saluran Napas",
+              "distinguishing_features": "Onset sangat mendadak tanpa riwayat atopi, riwayat tersedak, mengi unilateral",
+              "relevance_note": "Diagnosis kritis yang harus disingkirkan terutama pada anak dengan onset sangat akut tanpa riwayat asma sebelumnya"
+            },
+            {
+              "diagnosis": "Pneumonia",
+              "distinguishing_features": "Demam prominent, ronki basah bukan mengi, onset lebih gradual",
+              "relevance_note": "Dapat dibedakan dari tidak adanya demam pada kasus ini"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan riwayat episode sesak/mengi berulang sebelumnya",
+              "Menanyakan riwayat atopi pribadi (rhinitis, eksim)",
+              "Menanyakan riwayat atopi keluarga",
+              "Menanyakan pencetus spesifik (debu, dingin, aktivitas fisik, makanan)",
+              "Menanyakan pola gejala (memburuk malam hari)",
+              "Menanyakan riwayat tersedak atau benda asing",
+              "Menanyakan respons terhadap obat sebelumnya (bronkodilator)",
+              "Menanyakan dampak terhadap aktivitas sehari-hari dan sekolah"
+            ],
+            "physical_exam_items": [
+              "Inspeksi: penggunaan otot bantu napas, posisi tripod",
+              "Auskultasi: mengi bilateral vs unilateral, ekspirasi memanjang",
+              "Pemeriksaan tanda atopi: dermatitis, allergic shiners"
+            ],
+            "expected_workup": [
+              "Peak flow meter bila tersedia",
+              "Spirometri (di luar episode akut)",
+              "Pertimbangan foto toraks bila curiga benda asing atau diagnosis tidak jelas"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "RESP-003-SCT1",
+              "scenario_addition": "Anamnesis lebih lanjut mengungkap bahwa anak pernah mengalami 3 episode serupa dalam setahun terakhir dan memiliki riwayat eksim sejak bayi",
+              "hypothesis_tested": "Asma Bronkial",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Riwayat episode berulang dan atopi personal sangat mendukung diagnosis asma sesuai kriteria klinis"
+            },
+            {
+              "item_id": "RESP-003-SCT2",
+              "scenario_addition": "Mengi yang terdengar hanya pada satu sisi dada (unilateral)",
+              "hypothesis_tested": "Asma Bronkial",
+              "expert_panel_modal_response": "-2",
+              "rationale": "Mengi unilateral sangat tidak tipikal untuk asma yang biasanya bilateral, dan harus meningkatkan kecurigaan benda asing saluran napas"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sedang - mengi pada anak sering langsung diasosiasikan dengan asma tanpa menggali riwayat tersedak",
+            "anchoring_risk": "Sedang - riwayat alergi yang disebutkan di awal dapat membuat mahasiswa tidak mempertimbangkan benda asing"
+          }
+        }
+      ]
+    },
+    {
+      "system": "Kardiovaskular",
+      "system_code": "CARDIO",
+      "cases": [
+        {
+          "case_id": "CARDIO-001",
+          "title": "Nyeri dada mendadak pada laki-laki paruh baya",
+          "difficulty": "advanced",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Tn. D",
+            "age": 55,
+            "gender": "Laki-laki",
+            "chief_complaint": "Nyeri dada hebat seperti tertindih sejak 1 jam yang lalu, menjalar ke lengan kiri dan rahang",
+            "vital_signs": {
+              "blood_pressure": "150/95 mmHg",
+              "heart_rate": "98 x/menit",
+              "respiratory_rate": "20 x/menit",
+              "temperature": "36.7 C",
+              "spo2": "97%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Sindrom Koroner Akut (Infark Miokard Akut)",
+            "enabling_conditions": [
+              "Usia >45 tahun pada laki-laki",
+              "Riwayat hipertensi",
+              "Riwayat diabetes mellitus",
+              "Riwayat dislipidemia",
+              "Riwayat merokok",
+              "Riwayat keluarga penyakit jantung koroner prematur",
+              "Obesitas, gaya hidup sedentari"
+            ],
+            "fault_pathophysiology": "Oklusi akut arteri koroner akibat ruptur plak aterosklerosis dengan pembentukan trombus, menyebabkan iskemia dan nekrosis miokard pada area yang diperdarahi oleh arteri yang tersumbat.",
+            "consequences": {
+              "symptoms": [
+                "Nyeri dada retrosternal seperti tertindih/terbakar",
+                "Onset mendadak, durasi >20 menit",
+                "Menjalar ke lengan kiri, rahang, atau punggung",
+                "Disertai keringat dingin (diaforesis)",
+                "Mual atau muntah",
+                "Sesak napas",
+                "Rasa cemas / takut akan kematian"
+              ],
+              "physical_signs": [
+                "Pasien tampak gelisah, diaforesis",
+                "Tekanan darah dapat meningkat atau menurun (tergantung luas infark)",
+                "Bunyi jantung S4 gallop pada beberapa kasus",
+                "Tanda gagal jantung akut pada infark luas (ronki basah, JVP meningkat)"
+              ],
+              "diagnostic_findings": [
+                "EKG: elevasi segmen ST (STEMI) atau depresi/inversi T (NSTEMI)",
+                "Troponin meningkat (gold standard biomarker)",
+                "CK-MB meningkat",
+                "Ekokardiografi: gangguan gerak dinding regional"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Diseksi Aorta",
+              "distinguishing_features": "Nyeri dada tajam seperti robek, menjalar ke punggung, perbedaan tekanan darah antar kedua lengan",
+              "relevance_note": "Kritis untuk disingkirkan karena pemberian antikoagulan pada diseksi aorta yang dikira IMA dapat fatal"
+            },
+            {
+              "diagnosis": "Emboli Paru Masif",
+              "distinguishing_features": "Sesak napas prominent, faktor risiko trombosis vena, nyeri dada pleuritik",
+              "relevance_note": "Penting dipertimbangkan terutama bila ada faktor risiko imobilisasi"
+            },
+            {
+              "diagnosis": "Gastroesophageal Reflux Disease (GERD) Berat",
+              "distinguishing_features": "Nyeri berhubungan dengan makan, membaik dengan antasida, tidak ada diaforesis",
+              "relevance_note": "Diferensial yang sering disalahartikan namun penting tidak dijadikan premature closure tanpa EKG"
+            },
+            {
+              "diagnosis": "Perikarditis Akut",
+              "distinguishing_features": "Nyeri membaik dengan posisi membungkuk ke depan, memburuk saat berbaring, friction rub pada auskultasi",
+              "relevance_note": "Dapat dibedakan dari pola nyeri yang berhubungan dengan posisi"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan karakteristik nyeri (lokasi, kualitas, durasi, penjalaran)",
+              "Menanyakan faktor pencetus dan yang memperberat/meringankan",
+              "Menanyakan gejala penyerta (keringat dingin, mual, sesak)",
+              "Menanyakan faktor risiko kardiovaskular (hipertensi, DM, dislipidemia, merokok)",
+              "Menanyakan riwayat keluarga penyakit jantung",
+              "Menanyakan perbedaan kekuatan nadi/tekanan darah antar lengan (skrining diseksi aorta)",
+              "Menanyakan faktor risiko trombosis (skrining emboli paru)",
+              "Menanyakan hubungan nyeri dengan posisi dan pernapasan"
+            ],
+            "physical_exam_items": [
+              "Pengukuran tekanan darah pada kedua lengan",
+              "Auskultasi jantung: gallop, friction rub, murmur baru",
+              "Auskultasi paru: ronki basah",
+              "Pemeriksaan JVP",
+              "Pemeriksaan nadi perifer"
+            ],
+            "expected_workup": [
+              "EKG 12 lead segera",
+              "Troponin",
+              "Foto toraks",
+              "D-dimer bila curiga emboli paru"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "CARDIO-001-SCT1",
+              "scenario_addition": "Tekanan darah lengan kanan 150/95 mmHg, lengan kiri 110/70 mmHg",
+              "hypothesis_tested": "Sindrom Koroner Akut",
+              "expert_panel_modal_response": "-2",
+              "rationale": "Perbedaan tekanan darah signifikan antar lengan adalah tanda klasik diseksi aorta dan harus menurunkan kecurigaan SKA murni sambil meningkatkan kewaspadaan diseksi"
+            },
+            {
+              "item_id": "CARDIO-001-SCT2",
+              "scenario_addition": "EKG menunjukkan elevasi segmen ST pada lead II, III, aVF",
+              "hypothesis_tested": "Sindrom Koroner Akut",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Elevasi ST pada lead inferior adalah bukti kuat STEMI inferior, sangat mendukung diagnosis SKA"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sangat tinggi - nyeri dada klasik pada laki-laki paruh baya sangat mengarahkan ke IMA sehingga diseksi aorta sering tidak dipertimbangkan",
+            "anchoring_risk": "Sangat tinggi - begitu mendengar 'nyeri dada menjalar ke lengan', mahasiswa cenderung tidak mengukur tekanan darah di kedua lengan"
+          }
+        },
+        {
+          "case_id": "CARDIO-002",
+          "title": "Sesak napas dan bengkak kaki progresif",
+          "difficulty": "intermediate",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Tn. E",
+            "age": 62,
+            "gender": "Laki-laki",
+            "chief_complaint": "Sesak napas yang memberat terutama saat berbaring, disertai bengkak pada kedua tungkai sejak 2 minggu",
+            "vital_signs": {
+              "blood_pressure": "140/85 mmHg",
+              "heart_rate": "102 x/menit",
+              "respiratory_rate": "24 x/menit",
+              "temperature": "36.5 C",
+              "spo2": "93%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Gagal Jantung Kongestif (Decompensated Heart Failure)",
+            "enabling_conditions": [
+              "Riwayat penyakit jantung koroner",
+              "Riwayat hipertensi tidak terkontrol",
+              "Riwayat infark miokard sebelumnya",
+              "Usia lanjut",
+              "Riwayat penyakit valvular jantung",
+              "Ketidakpatuhan terhadap obat atau diet rendah garam"
+            ],
+            "fault_pathophysiology": "Penurunan kemampuan jantung memompa darah secara adekuat (sistolik) atau mengisi secara adekuat (diastolik), menyebabkan kongesti vena pulmonal (menyebabkan sesak) dan kongesti vena sistemik (menyebabkan edema perifer).",
+            "consequences": {
+              "symptoms": [
+                "Sesak napas saat aktivitas (dyspnea on exertion)",
+                "Ortopnea (sesak memberat saat berbaring)",
+                "Paroxysmal nocturnal dyspnea",
+                "Edema tungkai bilateral",
+                "Kelelahan",
+                "Penambahan berat badan cepat (retensi cairan)",
+                "Batuk terutama malam hari"
+              ],
+              "physical_signs": [
+                "Peningkatan JVP",
+                "Ronki basah basal bilateral",
+                "Edema pitting tungkai bilateral",
+                "S3 gallop",
+                "Hepatomegali (pada gagal jantung kanan)",
+                "Refluks hepatojugular"
+              ],
+              "diagnostic_findings": [
+                "Foto toraks: kardiomegali, kongesti vena pulmonal, efusi pleura",
+                "BNP/NT-proBNP meningkat",
+                "Ekokardiografi: penurunan fraksi ejeksi atau disfungsi diastolik",
+                "EKG: dapat menunjukkan tanda infark lama atau hipertrofi"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Penyakit Ginjal Kronik dengan Overload Cairan",
+              "distinguishing_features": "Riwayat penyakit ginjal, edema tanpa ortopnea prominent, BNP tidak terlalu tinggi",
+              "relevance_note": "Penting dibedakan karena tata laksana cairan berbeda"
+            },
+            {
+              "diagnosis": "Sindrom Nefrotik",
+              "distinguishing_features": "Edema anasarka, proteinuria masif, riwayat penyakit ginjal",
+              "relevance_note": "Perlu dipertimbangkan terutama bila edema lebih generalisata"
+            },
+            {
+              "diagnosis": "Sirosis Hepatis dengan Asites",
+              "distinguishing_features": "Riwayat penyakit hati, asites lebih prominent dari edema tungkai, stigmata penyakit hati kronik",
+              "relevance_note": "Dibedakan dari pola distribusi cairan dan riwayat penyakit hati"
+            },
+            {
+              "diagnosis": "Emboli Paru Kronik (Hipertensi Pulmonal Tromboembolik)",
+              "distinguishing_features": "Sesak progresif tanpa ortopnea klasik, riwayat trombosis vena sebelumnya",
+              "relevance_note": "Diferensial yang sering terlewat pada sesak kronik progresif"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan progresivitas sesak napas",
+              "Menanyakan ortopnea dan jumlah bantal yang digunakan saat tidur",
+              "Menanyakan paroxysmal nocturnal dyspnea",
+              "Menanyakan riwayat penyakit jantung sebelumnya",
+              "Menanyakan kepatuhan minum obat dan diet",
+              "Menanyakan riwayat penyakit ginjal dan hati",
+              "Menanyakan penambahan berat badan dan jumlah urin",
+              "Menanyakan distribusi edema (tungkai saja vs anasarka)"
+            ],
+            "physical_exam_items": [
+              "Pemeriksaan JVP",
+              "Auskultasi jantung untuk gallop dan murmur",
+              "Auskultasi paru basal bilateral",
+              "Pemeriksaan edema dan pitting",
+              "Palpasi hepar untuk hepatomegali",
+              "Refluks hepatojugular"
+            ],
+            "expected_workup": [
+              "Foto toraks",
+              "BNP/NT-proBNP",
+              "Ekokardiografi",
+              "Fungsi ginjal dan elektrolit"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "CARDIO-002-SCT1",
+              "scenario_addition": "JVP meningkat 4 cm di atas sudut sternal, ditemukan S3 gallop, dan riwayat infark miokard 3 tahun lalu",
+              "hypothesis_tested": "Gagal Jantung Kongestif",
+              "expert_panel_modal_response": "+2",
+              "rationale": "JVP meningkat, S3 gallop, dan riwayat infark adalah kombinasi yang sangat mendukung gagal jantung sebagai etiologi"
+            },
+            {
+              "item_id": "CARDIO-002-SCT2",
+              "scenario_addition": "Tidak ditemukan ortopnea, namun pasien memiliki riwayat penyakit ginjal kronik stadium 4",
+              "hypothesis_tested": "Gagal Jantung Kongestif",
+              "expert_panel_modal_response": "-1",
+              "rationale": "Tidak adanya ortopnea bersamaan dengan riwayat CKD lanjut menggeser kecurigaan ke arah overload cairan akibat gangguan ginjal, meski tidak menyingkirkan komponen kardiak"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sedang - kombinasi sesak dan edema sering langsung diarahkan ke jantung tanpa menggali riwayat ginjal/hati",
+            "anchoring_risk": "Sedang - riwayat jantung sebelumnya dapat membuat mahasiswa tidak mengeksplorasi etiologi non-kardiak"
+          }
+        }
+      ]
+    },
+    {
+      "system": "Gastrointestinal",
+      "system_code": "GI",
+      "cases": [
+        {
+          "case_id": "GI-001",
+          "title": "Nyeri perut kanan bawah akut",
+          "difficulty": "intermediate",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Sdr. F",
+            "age": 22,
+            "gender": "Laki-laki",
+            "chief_complaint": "Nyeri perut yang awalnya di ulu hati, berpindah ke perut kanan bawah dalam 12 jam terakhir",
+            "vital_signs": {
+              "blood_pressure": "120/80 mmHg",
+              "heart_rate": "95 x/menit",
+              "respiratory_rate": "18 x/menit",
+              "temperature": "38.2 C",
+              "spo2": "98%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Apendisitis Akut",
+            "enabling_conditions": [
+              "Usia muda (10-30 tahun paling sering)",
+              "Obstruksi lumen apendiks oleh fekalit atau hiperplasia limfoid",
+              "Riwayat diet rendah serat"
+            ],
+            "fault_pathophysiology": "Obstruksi lumen apendiks vermiformis menyebabkan distensi, peningkatan tekanan intraluminal, gangguan aliran darah, dan invasi bakteri yang menyebabkan inflamasi progresif hingga berpotensi perforasi bila tidak ditangani.",
+            "consequences": {
+              "symptoms": [
+                "Nyeri periumbilikal yang berpindah ke kuadran kanan bawah (migrasi klasik)",
+                "Anoreksia",
+                "Nausea dan muntah",
+                "Demam subfebris",
+                "Nyeri memberat dengan gerakan/batuk"
+              ],
+              "physical_signs": [
+                "Nyeri tekan McBurney point",
+                "Tanda Rovsing positif",
+                "Tanda psoas dan obturator positif",
+                "Defans muskular lokal",
+                "Rebound tenderness"
+              ],
+              "diagnostic_findings": [
+                "Leukositosis dengan dominasi neutrofil",
+                "USG abdomen: apendiks membesar, dinding menebal, non-compressible",
+                "CT scan abdomen: apendiks membesar dengan inflamasi periapendikular"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Gastroenteritis Akut",
+              "distinguishing_features": "Diare prominent, nyeri perut difus tanpa migrasi khas, tidak ada tanda peritoneal lokal",
+              "relevance_note": "Penting dibedakan karena tata laksana sangat berbeda (konservatif vs bedah)"
+            },
+            {
+              "diagnosis": "Kolik Ureter (Batu Saluran Kemih)",
+              "distinguishing_features": "Nyeri kolik hebat menjalar ke selangkangan, hematuria, tidak ada migrasi nyeri khas apendisitis",
+              "relevance_note": "Dapat menyerupai apendisitis terutama bila batu di ureter distal kanan"
+            },
+            {
+              "diagnosis": "Kista Ovarium Terpelintir / Pecah",
+              "distinguishing_features": "Nyeri mendadak hebat, riwayat siklus menstruasi, massa adneksa pada pemeriksaan",
+              "relevance_note": "Wajib dipertimbangkan pada pasien perempuan usia reproduktif dengan nyeri kuadran kanan bawah"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan kronologi dan migrasi nyeri (periumbilikal ke kanan bawah)",
+              "Menanyakan gejala penyerta (mual, muntah, anoreksia, demam)",
+              "Menanyakan riwayat BAB dan BAK",
+              "Menanyakan riwayat menstruasi (pada pasien perempuan)",
+              "Menanyakan faktor yang memperberat nyeri (gerakan, batuk)",
+              "Menanyakan riwayat operasi abdomen sebelumnya"
+            ],
+            "physical_exam_items": [
+              "Palpasi titik McBurney",
+              "Tanda Rovsing",
+              "Tanda psoas dan obturator",
+              "Pemeriksaan rebound tenderness",
+              "Auskultasi bising usus"
+            ],
+            "expected_workup": [
+              "Darah lengkap (leukosit)",
+              "USG abdomen",
+              "Urinalisis",
+              "Tes kehamilan pada perempuan usia reproduktif"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "GI-001-SCT1",
+              "scenario_addition": "Ditemukan rebound tenderness positif dan defans muskular pada kuadran kanan bawah",
+              "hypothesis_tested": "Apendisitis Akut",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Tanda peritoneal lokal sangat mendukung diagnosis apendisitis"
+            },
+            {
+              "item_id": "GI-001-SCT2",
+              "scenario_addition": "Pasien mengaku nyeri muncul bersamaan dengan diare cair 5 kali dan tidak ada migrasi nyeri yang jelas",
+              "hypothesis_tested": "Apendisitis Akut",
+              "expert_panel_modal_response": "-2",
+              "rationale": "Diare prominent dan tidak adanya migrasi nyeri klasik lebih mengarah ke gastroenteritis dibanding apendisitis"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Tinggi - nyeri kanan bawah pada usia muda sering langsung disimpulkan apendisitis tanpa menyingkirkan diferensial ginekologi/urologi",
+            "anchoring_risk": "Tinggi - terutama pada pasien perempuan, mahasiswa sering lupa menanyakan riwayat menstruasi setelah curiga apendisitis"
+          }
+        },
+        {
+          "case_id": "GI-002",
+          "title": "Nyeri ulu hati kronik dengan riwayat konsumsi OAINS",
+          "difficulty": "basic",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Ny. G",
+            "age": 58,
+            "gender": "Perempuan",
+            "chief_complaint": "Nyeri ulu hati seperti terbakar sejak 2 bulan, memberat setelah makan, disertai BAB hitam sejak 3 hari",
+            "vital_signs": {
+              "blood_pressure": "100/65 mmHg",
+              "heart_rate": "100 x/menit",
+              "respiratory_rate": "18 x/menit",
+              "temperature": "36.6 C",
+              "spo2": "98%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Ulkus Peptikum dengan Perdarahan Saluran Cerna Atas",
+            "enabling_conditions": [
+              "Riwayat konsumsi OAINS jangka panjang (untuk nyeri sendi)",
+              "Infeksi Helicobacter pylori",
+              "Usia lanjut",
+              "Riwayat merokok dan konsumsi alkohol",
+              "Stres fisiologis berat (luka bakar, sepsis)"
+            ],
+            "fault_pathophysiology": "Kerusakan barrier mukosa lambung/duodenum akibat OAINS (inhibisi prostaglandin protektif) atau infeksi H. pylori, menyebabkan ulkus yang dapat mengenai pembuluh darah submukosa dan menyebabkan perdarahan.",
+            "consequences": {
+              "symptoms": [
+                "Nyeri ulu hati seperti terbakar",
+                "Nyeri berhubungan dengan makan (membaik atau memberat tergantung lokasi ulkus)",
+                "Melena (BAB hitam) bila terjadi perdarahan",
+                "Hematemesis pada perdarahan masif",
+                "Lemas, pusing (tanda anemia akibat perdarahan)"
+              ],
+              "physical_signs": [
+                "Nyeri tekan epigastrium",
+                "Tanda anemia: konjungtiva pucat",
+                "Takikardia dan hipotensi pada perdarahan signifikan",
+                "Melena pada pemeriksaan rectal toucher"
+              ],
+              "diagnostic_findings": [
+                "Hemoglobin menurun",
+                "Endoskopi: ulkus dengan atau tanpa stigmata perdarahan",
+                "Tes H. pylori (urea breath test, stool antigen, atau biopsi)",
+                "BUN meningkat tidak proporsional terhadap kreatinin (tanda perdarahan GI atas)"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Gastritis Erosif",
+              "distinguishing_features": "Nyeri lebih ringan, jarang menyebabkan perdarahan signifikan, riwayat OAINS lebih singkat",
+              "relevance_note": "Spektrum yang overlap dengan ulkus peptikum, dibedakan via endoskopi"
+            },
+            {
+              "diagnosis": "Karsinoma Lambung",
+              "distinguishing_features": "Penurunan berat badan progresif, anoreksia, usia lebih tua, massa teraba pada kasus lanjut",
+              "relevance_note": "Wajib disingkirkan terutama pada pasien usia >50 tahun dengan gejala alarm (penurunan BB, anemia)"
+            },
+            {
+              "diagnosis": "Varises Esofagus Pecah",
+              "distinguishing_features": "Riwayat penyakit hati kronik/sirosis, hematemesis masif tanpa nyeri ulu hati prominent",
+              "relevance_note": "Penting dibedakan karena tata laksana berbeda signifikan, perlu ditanyakan riwayat penyakit hati"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan karakteristik nyeri dan hubungannya dengan makan",
+              "Menanyakan riwayat konsumsi OAINS atau obat nyeri sendi",
+              "Menanyakan riwayat BAB hitam atau muntah darah",
+              "Menanyakan gejala alarm: penurunan berat badan, anoreksia",
+              "Menanyakan riwayat penyakit hati atau konsumsi alkohol",
+              "Menanyakan riwayat infeksi H. pylori sebelumnya"
+            ],
+            "physical_exam_items": [
+              "Palpasi epigastrium",
+              "Pemeriksaan tanda anemia (konjungtiva, telapak tangan)",
+              "Tanda vital untuk syok hipovolemik",
+              "Rectal toucher untuk melena",
+              "Stigmata penyakit hati kronik (jika dicurigai)"
+            ],
+            "expected_workup": [
+              "Darah lengkap (hemoglobin)",
+              "Endoskopi saluran cerna atas",
+              "Fungsi hati dan koagulasi",
+              "Tes H. pylori"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "GI-002-SCT1",
+              "scenario_addition": "Pasien mengonsumsi ibuprofen setiap hari selama 6 bulan untuk nyeri lutut",
+              "hypothesis_tested": "Ulkus Peptikum dengan Perdarahan",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Konsumsi OAINS kronik adalah faktor risiko utama ulkus peptikum dan perdarahan GI atas"
+            },
+            {
+              "item_id": "GI-002-SCT2",
+              "scenario_addition": "Pasien diketahui memiliki riwayat sirosis hepatis dan tampak spider nevi pada dada",
+              "hypothesis_tested": "Ulkus Peptikum dengan Perdarahan",
+              "expert_panel_modal_response": "-1",
+              "rationale": "Stigmata penyakit hati kronik meningkatkan kecurigaan varises esofagus sebagai sumber perdarahan alternatif"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sedang - melena dengan nyeri ulu hati sering langsung disimpulkan ulkus peptikum tanpa menggali riwayat penyakit hati",
+            "anchoring_risk": "Sedang - riwayat OAINS yang ditemukan di awal dapat membuat mahasiswa tidak mengeksplorasi etiologi varises"
+          }
+        }
+      ]
+    },
+    {
+      "system": "Neurologi",
+      "system_code": "NEURO",
+      "cases": [
+        {
+          "case_id": "NEURO-001",
+          "title": "Kelumpuhan separuh badan mendadak",
+          "difficulty": "advanced",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Tn. H",
+            "age": 60,
+            "gender": "Laki-laki",
+            "chief_complaint": "Tiba-tiba lemah pada sisi kanan tubuh dan bicara pelo sejak 2 jam yang lalu",
+            "vital_signs": {
+              "blood_pressure": "180/100 mmHg",
+              "heart_rate": "88 x/menit",
+              "respiratory_rate": "18 x/menit",
+              "temperature": "36.8 C",
+              "spo2": "97%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Stroke Iskemik Akut",
+            "enabling_conditions": [
+              "Usia lanjut",
+              "Riwayat hipertensi tidak terkontrol",
+              "Riwayat fibrilasi atrium",
+              "Riwayat diabetes mellitus",
+              "Riwayat dislipidemia",
+              "Riwayat merokok",
+              "Riwayat stroke atau TIA sebelumnya"
+            ],
+            "fault_pathophysiology": "Oklusi pembuluh darah serebral (trombotik atau embolik) menyebabkan iskemia jaringan otak pada area yang diperdarahi, mengakibatkan defisit neurologis fokal sesuai lokasi lesi. Jendela terapi trombolitik adalah onset 4.5 jam.",
+            "consequences": {
+              "symptoms": [
+                "Kelemahan/kelumpuhan mendadak satu sisi tubuh (hemiparesis)",
+                "Bicara pelo (disartria) atau sulit bicara (afasia)",
+                "Mulut perot/asimetris",
+                "Gangguan penglihatan mendadak",
+                "Onset mendadak, biasanya tanpa nyeri kepala (berbeda dari stroke hemoragik)"
+              ],
+              "physical_signs": [
+                "Hemiparesis dengan kekuatan motorik menurun pada sisi terkena",
+                "Paresis nervus fasialis sentral (lipatan nasolabial menghilang, mulut tertarik ke sisi sehat)",
+                "Refleks patologis (Babinski positif)",
+                "Gangguan sensorik pada sisi yang sama dengan motorik",
+                "Skor NIHSS untuk menilai derajat keparahan"
+              ],
+              "diagnostic_findings": [
+                "CT scan kepala non-kontras: menyingkirkan perdarahan (penting sebelum trombolitik), area hipodens pada infark",
+                "MRI difusi: lebih sensitif untuk infark akut",
+                "EKG: skrining fibrilasi atrium sebagai sumber emboli",
+                "Profil lipid, gula darah"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Stroke Hemoragik",
+              "distinguishing_features": "Nyeri kepala hebat mendadak, penurunan kesadaran lebih cepat dan berat, sering disertai mual muntah",
+              "relevance_note": "Kritis dibedakan dari stroke iskemik karena tata laksana berlawanan (trombolitik kontraindikasi pada hemoragik)"
+            },
+            {
+              "diagnosis": "Hipoglikemia",
+              "distinguishing_features": "Riwayat DM dengan terapi insulin/OAD, dapat menyebabkan defisit neurologis fokal yang reversibel dengan koreksi gula darah",
+              "relevance_note": "Wajib disingkirkan dengan pemeriksaan gula darah cepat karena dapat menyerupai stroke (stroke mimic) dan reversibel"
+            },
+            {
+              "diagnosis": "Bell's Palsy (Paresis Fasialis Perifer)",
+              "distinguishing_features": "Hanya melibatkan wajah tanpa kelemahan ekstremitas, dahi ikut terkena (tidak bisa mengangkat alis), tanpa faktor risiko vaskular prominent",
+              "relevance_note": "Penting dibedakan dari paresis fasialis sentral pada stroke berdasarkan keterlibatan dahi"
+            },
+            {
+              "diagnosis": "Transient Ischemic Attack (TIA)",
+              "distinguishing_features": "Gejala serupa namun resolusi sempurna dalam 24 jam",
+              "relevance_note": "Tidak dapat dipastikan saat presentasi akut, namun tetap memerlukan evaluasi dan tata laksana segera sebagai sinyal peringatan stroke"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menentukan waktu onset secara presisi (krusial untuk jendela trombolitik)",
+              "Menanyakan gejala penyerta (nyeri kepala, muntah, penurunan kesadaran)",
+              "Menanyakan riwayat faktor risiko vaskular (hipertensi, DM, fibrilasi atrium, merokok)",
+              "Menanyakan riwayat stroke/TIA sebelumnya",
+              "Menanyakan riwayat konsumsi antikoagulan",
+              "Menanyakan kemungkinan hipoglikemia (riwayat DM, waktu makan terakhir)"
+            ],
+            "physical_exam_items": [
+              "Pemeriksaan kekuatan motorik keempat ekstremitas",
+              "Pemeriksaan nervus kranialis terutama VII (fasialis)",
+              "Pemeriksaan apakah dahi ikut terkena (membedakan sentral vs perifer)",
+              "Pemeriksaan sensorik",
+              "Pemeriksaan refleks patologis (Babinski)",
+              "Skrining NIHSS"
+            ],
+            "expected_workup": [
+              "Gula darah sewaktu (segera, menyingkirkan hipoglikemia)",
+              "CT scan kepala non-kontras segera",
+              "EKG",
+              "Profil koagulasi"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "NEURO-001-SCT1",
+              "scenario_addition": "Gula darah sewaktu pasien terukur 35 mg/dL",
+              "hypothesis_tested": "Stroke Iskemik Akut",
+              "expert_panel_modal_response": "-2",
+              "rationale": "Hipoglikemia berat dapat menyebabkan defisit neurologis fokal yang menyerupai stroke namun reversibel dengan koreksi gula darah, sehingga harus disingkirkan dahulu"
+            },
+            {
+              "item_id": "NEURO-001-SCT2",
+              "scenario_addition": "Pasien juga tidak dapat mengangkat alis pada sisi wajah yang lemah, namun kekuatan ekstremitas normal",
+              "hypothesis_tested": "Stroke Iskemik Akut",
+              "expert_panel_modal_response": "-1",
+              "rationale": "Keterlibatan dahi (tidak bisa mengangkat alis) mengindikasikan paresis fasialis perifer (Bell's palsy) bukan sentral, dan tanpa kelemahan ekstremitas mengurangi kecurigaan stroke"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Tinggi - kelumpuhan separuh badan mendadak pada lansia sangat klasik untuk stroke sehingga hipoglikemia sering tidak disingkirkan terlebih dahulu",
+            "anchoring_risk": "Sangat tinggi - begitu curiga stroke, mahasiswa sering lupa memeriksa gula darah sewaktu yang seharusnya menjadi pemeriksaan pertama"
+          }
+        },
+        {
+          "case_id": "NEURO-002",
+          "title": "Nyeri kepala hebat mendadak",
+          "difficulty": "advanced",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Ny. I",
+            "age": 45,
+            "gender": "Perempuan",
+            "chief_complaint": "Nyeri kepala sangat hebat mendadak seperti disambar petir, disertai mual muntah dan leher kaku",
+            "vital_signs": {
+              "blood_pressure": "160/95 mmHg",
+              "heart_rate": "95 x/menit",
+              "respiratory_rate": "20 x/menit",
+              "temperature": "37.0 C",
+              "spo2": "98%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Perdarahan Subarachnoid",
+            "enabling_conditions": [
+              "Riwayat hipertensi",
+              "Aneurisma serebral (sering tidak terdiagnosis sebelumnya)",
+              "Riwayat keluarga aneurisma serebral atau penyakit ginjal polikistik",
+              "Merokok dan konsumsi alkohol berat",
+              "Riwayat trauma kepala (pada beberapa kasus)"
+            ],
+            "fault_pathophysiology": "Ruptur aneurisma serebral (paling sering di Circle of Willis) menyebabkan ekstravasasi darah ke ruang subarachnoid, menimbulkan peningkatan tekanan intrakranial mendadak dan iritasi meningeal.",
+            "consequences": {
+              "symptoms": [
+                "Nyeri kepala onset sangat mendadak, intensitas maksimal sejak awal (thunderclap headache)",
+                "Mual dan muntah projektil",
+                "Fotofobia",
+                "Penurunan kesadaran (bervariasi dari ringan hingga koma)",
+                "Kejang pada beberapa kasus"
+              ],
+              "physical_signs": [
+                "Kaku kuduk (meningismus)",
+                "Tanda Kernig dan Brudzinski positif",
+                "Defisit neurologis fokal bila ada perdarahan parenkim",
+                "Penurunan kesadaran sesuai skala GCS"
+              ],
+              "diagnostic_findings": [
+                "CT scan kepala non-kontras: darah hiperdens di ruang subarachnoid (sensitivitas tinggi dalam 6 jam pertama)",
+                "Lumbal pungsi (bila CT negatif tapi kecurigaan klinis tinggi): xanthochromia, eritrosit tinggi",
+                "CT angiografi atau angiografi serebral: identifikasi lokasi aneurisma"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Meningitis Bakterial",
+              "distinguishing_features": "Demam tinggi prominent, onset lebih gradual (jam ke hari), riwayat infeksi sebelumnya",
+              "relevance_note": "Penting dibedakan karena tata laksana berbeda total (antibiotik vs evaluasi bedah saraf)"
+            },
+            {
+              "diagnosis": "Migrain dengan Aura",
+              "distinguishing_features": "Riwayat migrain berulang sebelumnya, onset lebih gradual meski masih akut, tidak ada kaku kuduk",
+              "relevance_note": "Dibedakan dari pola onset thunderclap yang sangat mendadak pada SAH"
+            },
+            {
+              "diagnosis": "Hipertensi Emergensi dengan Ensefalopati",
+              "distinguishing_features": "Tekanan darah sangat tinggi (>180/120), gejala membaik dengan penurunan tekanan darah",
+              "relevance_note": "Perlu dipertimbangkan terutama bila tekanan darah sangat tinggi, namun tetap perlu CT untuk menyingkirkan SAH"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan karakteristik onset nyeri kepala (mendadak vs gradual)",
+              "Menanyakan apakah ini nyeri kepala terhebat yang pernah dialami",
+              "Menanyakan riwayat nyeri kepala/migrain sebelumnya",
+              "Menanyakan gejala penyerta (mual, muntah, fotofobia, kejang)",
+              "Menanyakan riwayat demam dan infeksi sebelumnya",
+              "Menanyakan riwayat trauma kepala",
+              "Menanyakan riwayat keluarga aneurisma atau stroke"
+            ],
+            "physical_exam_items": [
+              "Pemeriksaan kaku kuduk",
+              "Tanda Kernig dan Brudzinski",
+              "Pemeriksaan tingkat kesadaran (GCS)",
+              "Pemeriksaan defisit neurologis fokal",
+              "Funduskopi (papiledema)"
+            ],
+            "expected_workup": [
+              "CT scan kepala non-kontras segera",
+              "Lumbal pungsi bila CT negatif namun kecurigaan tinggi",
+              "Darah lengkap dan profil koagulasi"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "NEURO-002-SCT1",
+              "scenario_addition": "Pasien menyatakan ini adalah nyeri kepala terhebat sepanjang hidupnya dan muncul tiba-tiba dalam hitungan detik",
+              "hypothesis_tested": "Perdarahan Subarachnoid",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Pola thunderclap headache dengan intensitas maksimal sejak onset sangat khas untuk SAH dan merupakan red flag klasik"
+            },
+            {
+              "item_id": "NEURO-002-SCT2",
+              "scenario_addition": "Pasien diketahui demam tinggi 39 C sejak 2 hari sebelum nyeri kepala muncul, dengan riwayat infeksi telinga yang tidak diobati",
+              "hypothesis_tested": "Perdarahan Subarachnoid",
+              "expert_panel_modal_response": "-2",
+              "rationale": "Demam tinggi mendahului gejala dengan riwayat infeksi fokal sangat mengarahkan ke meningitis bakterial sebagai etiologi yang lebih mungkin"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sedang - nyeri kepala dengan kaku kuduk dapat langsung diarahkan ke meningitis tanpa menggali karakteristik onset thunderclap",
+            "anchoring_risk": "Tinggi - mahasiswa yang sudah curiga migrain karena pasien perempuan usia produktif sering tidak menggali apakah ini episode pertama dengan severity berbeda"
+          }
+        }
+      ]
+    },
+    {
+      "system": "Urogenital",
+      "system_code": "URO",
+      "cases": [
+        {
+          "case_id": "URO-001",
+          "title": "Nyeri pinggang dan demam dengan keluhan berkemih",
+          "difficulty": "intermediate",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Ny. J",
+            "age": 28,
+            "gender": "Perempuan",
+            "chief_complaint": "Demam tinggi disertai nyeri pinggang kanan dan sering buang air kecil yang nyeri sejak 3 hari",
+            "vital_signs": {
+              "blood_pressure": "110/70 mmHg",
+              "heart_rate": "100 x/menit",
+              "respiratory_rate": "20 x/menit",
+              "temperature": "38.7 C",
+              "spo2": "98%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Pielonefritis Akut",
+            "enabling_conditions": [
+              "Jenis kelamin perempuan (uretra lebih pendek)",
+              "Riwayat infeksi saluran kemih bawah sebelumnya",
+              "Aktivitas seksual",
+              "Kehamilan",
+              "Anomali struktural saluran kemih",
+              "Diabetes mellitus"
+            ],
+            "fault_pathophysiology": "Infeksi bakteri (umumnya E. coli) yang naik dari saluran kemih bawah ke ginjal, menyebabkan inflamasi parenkim ginjal dan sistem pelvikalises.",
+            "consequences": {
+              "symptoms": [
+                "Demam tinggi dengan menggigil",
+                "Nyeri pinggang/costovertebral angle (CVA) unilateral",
+                "Disuria (nyeri saat berkemih)",
+                "Frekuensi dan urgensi berkemih",
+                "Mual muntah",
+                "Pada kasus berat: tanda sepsis"
+              ],
+              "physical_signs": [
+                "Nyeri tekan/ketok CVA positif pada sisi terkena",
+                "Demam tinggi",
+                "Takikardia",
+                "Nyeri tekan suprapubik (bila ada sistitis bersamaan)"
+              ],
+              "diagnostic_findings": [
+                "Urinalisis: leukosit esterase positif, nitrit positif, leukosituria, bakteriuria",
+                "Kultur urin: identifikasi organisme penyebab",
+                "Leukositosis pada darah lengkap",
+                "USG ginjal bila curiga komplikasi (abses, obstruksi)"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Sistitis Akut (ISK Bawah)",
+              "distinguishing_features": "Tanpa demam tinggi atau nyeri CVA, hanya gejala iritatif berkemih",
+              "relevance_note": "Penting dibedakan karena pielonefritis membutuhkan terapi antibiotik lebih agresif dan lebih lama"
+            },
+            {
+              "diagnosis": "Nefrolitiasis dengan Infeksi",
+              "distinguishing_features": "Nyeri kolik yang lebih hebat dan intermiten, riwayat batu ginjal sebelumnya, hematuria",
+              "relevance_note": "Perlu USG untuk menyingkirkan obstruksi akibat batu yang memerlukan tata laksana berbeda"
+            },
+            {
+              "diagnosis": "Apendisitis Retrosekal",
+              "distinguishing_features": "Nyeri lebih ke arah kanan bawah, tanpa gejala iritatif berkemih prominent",
+              "relevance_note": "Pada kasus tertentu, apendisitis dengan posisi retrosekal dapat menyerupai pielonefritis kanan"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan karakteristik nyeri pinggang dan lokasinya",
+              "Menanyakan gejala berkemih (disuria, frekuensi, urgensi, hematuria)",
+              "Menanyakan riwayat ISK sebelumnya",
+              "Menanyakan kemungkinan kehamilan",
+              "Menanyakan riwayat batu ginjal sebelumnya",
+              "Menanyakan riwayat diabetes"
+            ],
+            "physical_exam_items": [
+              "Pemeriksaan nyeri ketok CVA",
+              "Palpasi suprapubik",
+              "Pemeriksaan tanda vital untuk skrining sepsis",
+              "Pemeriksaan abdomen umum (menyingkirkan apendisitis)"
+            ],
+            "expected_workup": [
+              "Urinalisis lengkap",
+              "Kultur urin",
+              "Darah lengkap",
+              "USG ginjal bila curiga komplikasi"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "URO-001-SCT1",
+              "scenario_addition": "Nyeri ketok CVA kanan sangat positif, urinalisis menunjukkan leukosit esterase dan nitrit positif",
+              "hypothesis_tested": "Pielonefritis Akut",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Kombinasi nyeri CVA positif dengan urinalisis yang konsisten infeksi sangat mendukung pielonefritis"
+            },
+            {
+              "item_id": "URO-001-SCT2",
+              "scenario_addition": "Pasien memiliki riwayat batu ginjal kanan 2 tahun lalu dan nyeri bersifat kolik hilang timbul",
+              "hypothesis_tested": "Pielonefritis Akut",
+              "expert_panel_modal_response": "+1",
+              "rationale": "Riwayat batu ginjal meningkatkan kemungkinan pielonefritis terjadi sekunder akibat obstruksi/stasis urin, meski nyeri kolik mengarahkan perlu evaluasi batu bersamaan"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sedang - demam dengan nyeri pinggang sering langsung diarahkan pielonefritis tanpa mempertimbangkan apendisitis retrosekal",
+            "anchoring_risk": "Sedang - bila pasien perempuan, mahasiswa terkadang lupa menyingkirkan kemungkinan kehamilan ektopik pada nyeri perut bawah"
+          }
+        },
+        {
+          "case_id": "URO-002",
+          "title": "Nyeri pinggang kolik hebat menjalar ke selangkangan",
+          "difficulty": "intermediate",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Tn. M",
+            "age": 35,
+            "gender": "Laki-laki",
+            "chief_complaint": "Nyeri pinggang kanan hebat hilang timbul sejak 6 jam, menjalar ke selangkangan, disertai mual",
+            "vital_signs": {
+              "blood_pressure": "135/85 mmHg",
+              "heart_rate": "105 x/menit",
+              "respiratory_rate": "20 x/menit",
+              "temperature": "37.0 C",
+              "spo2": "98%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Nefrolitiasis (Kolik Renal)",
+            "enabling_conditions": [
+              "Riwayat batu ginjal sebelumnya",
+              "Dehidrasi kronik / kurang minum air",
+              "Riwayat keluarga batu ginjal",
+              "Diet tinggi protein hewani dan garam",
+              "Riwayat gout atau hiperurisemia"
+            ],
+            "fault_pathophysiology": "Pembentukan kristal mineral (paling sering kalsium oksalat) di saluran kemih yang mengalami obstruksi saat bermigrasi melalui ureter, menyebabkan distensi dan spasme otot polos ureter yang menimbulkan nyeri kolik hebat.",
+            "consequences": {
+              "symptoms": [
+                "Nyeri kolik hebat hilang timbul (bukan konstan)",
+                "Lokasi nyeri pinggang menjalar sesuai migrasi batu (ke selangkangan/skrotum bila batu turun)",
+                "Mual dan muntah",
+                "Hematuria (gross atau mikroskopik)",
+                "Disuria bila batu sudah dekat vesika"
+              ],
+              "physical_signs": [
+                "Nyeri ketok CVA positif",
+                "Pasien tampak kesakitan, sering bergerak gelisah (berbeda dari nyeri peritoneal yang membuat pasien diam)",
+                "Tidak ada tanda peritoneal"
+              ],
+              "diagnostic_findings": [
+                "Urinalisis: hematuria mikroskopik atau gross",
+                "USG ginjal: hidronefrosis, batu radiopak",
+                "CT scan tanpa kontras (gold standard): lokasi dan ukuran batu",
+                "Fungsi ginjal untuk skrining komplikasi"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Pielonefritis Akut",
+              "distinguishing_features": "Demam tinggi prominent, nyeri lebih konstan bukan kolik, urinalisis menunjukkan infeksi",
+              "relevance_note": "Dapat koeksis dengan nefrolitiasis sehingga perlu dievaluasi bersamaan"
+            },
+            {
+              "diagnosis": "Apendisitis Akut",
+              "distinguishing_features": "Migrasi nyeri periumbilikal ke kanan bawah, demam, tanda peritoneal",
+              "relevance_note": "Perlu dibedakan terutama bila lokasi nyeri kolik renal kanan tumpang tindih dengan kuadran kanan bawah"
+            },
+            {
+              "diagnosis": "Aneurisma Aorta Abdominalis Pecah",
+              "distinguishing_features": "Usia lebih tua, hipotensi, massa pulsatil abdomen",
+              "relevance_note": "Diagnosis kritis yang harus dipertimbangkan pada pasien usia lebih tua dengan nyeri pinggang akut berat"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan karakteristik nyeri (kolik vs konstan)",
+              "Menanyakan pola penjalaran nyeri",
+              "Menanyakan riwayat batu ginjal sebelumnya",
+              "Menanyakan riwayat hematuria",
+              "Menanyakan kecukupan asupan cairan harian",
+              "Menanyakan riwayat demam (skrining infeksi sekunder)"
+            ],
+            "physical_exam_items": [
+              "Nyeri ketok CVA",
+              "Inspeksi perilaku pasien (gelisah bergerak vs diam karena peritonitis)",
+              "Palpasi abdomen untuk menyingkirkan tanda peritoneal",
+              "Pengukuran tekanan darah dan tanda vital untuk skrining AAA pada usia tua"
+            ],
+            "expected_workup": [
+              "Urinalisis",
+              "USG ginjal atau CT scan tanpa kontras",
+              "Fungsi ginjal dan elektrolit"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "URO-002-SCT1",
+              "scenario_addition": "Urinalisis menunjukkan hematuria mikroskopik tanpa leukosit atau nitrit",
+              "hypothesis_tested": "Nefrolitiasis",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Hematuria murni tanpa tanda infeksi sangat mendukung batu saluran kemih dibanding pielonefritis"
+            },
+            {
+              "item_id": "URO-002-SCT2",
+              "scenario_addition": "Pasien tampak diam tidak berani bergerak karena nyeri bertambah, ditemukan defans muskular kuadran kanan bawah",
+              "hypothesis_tested": "Nefrolitiasis",
+              "expert_panel_modal_response": "-2",
+              "rationale": "Pasien diam dengan defans muskular adalah tanda peritoneal yang tidak tipikal kolik renal, lebih mengarah ke proses peritoneal seperti apendisitis"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sedang - nyeri pinggang menjalar selangkangan sangat klasik batu ginjal sehingga AAA pada pasien tua kadang tidak dipertimbangkan",
+            "anchoring_risk": "Rendah - kasus ini relatif distinctive, namun tetap perlu cek tanda peritoneal untuk menyingkirkan apendisitis"
+          }
+        }
+      ]
+    },
+    {
+      "system": "Endokrin & Gawat Darurat",
+      "system_code": "ENDO",
+      "cases": [
+        {
+          "case_id": "ENDO-001",
+          "title": "Penurunan kesadaran pada pasien diabetes",
+          "difficulty": "advanced",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Tn. K",
+            "age": 50,
+            "gender": "Laki-laki",
+            "chief_complaint": "Ditemukan tidak sadarkan diri di rumah, diketahui memiliki riwayat diabetes mellitus dan baru menyuntik insulin",
+            "vital_signs": {
+              "blood_pressure": "100/60 mmHg",
+              "heart_rate": "110 x/menit",
+              "respiratory_rate": "22 x/menit",
+              "temperature": "36.2 C",
+              "spo2": "97%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Hipoglikemia Berat",
+            "enabling_conditions": [
+              "Riwayat diabetes mellitus dengan terapi insulin atau sulfonilurea",
+              "Dosis insulin berlebihan atau waktu makan tidak sesuai",
+              "Aktivitas fisik berlebihan tanpa penyesuaian dosis",
+              "Gangguan fungsi ginjal (memperpanjang kerja obat)",
+              "Konsumsi alkohol bersamaan"
+            ],
+            "fault_pathophysiology": "Kadar insulin yang berlebihan relatif terhadap kebutuhan glukosa menyebabkan penurunan glukosa darah drastis, mengakibatkan defisit suplai glukosa ke otak yang sangat bergantung pada glukosa sebagai sumber energi utama.",
+            "consequences": {
+              "symptoms": [
+                "Gejala awal (adrenergik): berkeringat, gemetar, jantung berdebar, lapar",
+                "Gejala neurologis (neuroglikopenik): bingung, perubahan perilaku, kejang, penurunan kesadaran hingga koma",
+                "Onset dapat sangat cepat (menit hingga jam)"
+              ],
+              "physical_signs": [
+                "Penurunan tingkat kesadaran sesuai GCS",
+                "Diaforesis (berkeringat banyak)",
+                "Takikardia",
+                "Pucat",
+                "Dapat ditemukan tanda fokal neurologis sementara yang reversibel dengan koreksi gula darah"
+              ],
+              "diagnostic_findings": [
+                "Gula darah sewaktu rendah (<70 mg/dL, biasanya <40 mg/dL pada kasus berat)",
+                "Perbaikan klinis cepat setelah pemberian glukosa (dextrose IV)",
+                "Elektrolit dan fungsi ginjal untuk mengidentifikasi faktor pencetus"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Stroke Iskemik/Hemoragik",
+              "distinguishing_features": "Defisit neurologis fokal yang tidak membaik dengan koreksi gula darah, onset biasanya tanpa riwayat insulin",
+              "relevance_note": "Wajib disingkirkan dengan pemeriksaan gula darah cepat sebelum diagnosis stroke ditegakkan"
+            },
+            {
+              "diagnosis": "Ketoasidosis Diabetik (KAD)",
+              "distinguishing_features": "Gula darah tinggi (bukan rendah), napas Kussmaul, bau aseton, dehidrasi berat",
+              "relevance_note": "Kebalikan dari hipoglikemia secara mekanisme namun keduanya komplikasi akut DM yang harus dibedakan cepat"
+            },
+            {
+              "diagnosis": "Intoksikasi Alkohol atau Obat",
+              "distinguishing_features": "Riwayat konsumsi alkohol/obat, bau alkohol pada napas",
+              "relevance_note": "Dapat terjadi bersamaan dengan hipoglikemia terutama pada pasien DM yang mengonsumsi alkohol"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan riwayat diabetes dan jenis terapi (insulin/OAD)",
+              "Menanyakan waktu suntik insulin terakhir dan dosis",
+              "Menanyakan waktu makan terakhir",
+              "Menanyakan riwayat aktivitas fisik sebelum kejadian",
+              "Menanyakan kemungkinan konsumsi alkohol",
+              "Menanyakan riwayat episode hipoglikemia sebelumnya"
+            ],
+            "physical_exam_items": [
+              "Pemeriksaan tingkat kesadaran (GCS)",
+              "Pemeriksaan tanda vital lengkap",
+              "Pemeriksaan bau napas (aseton untuk KAD, alkohol untuk intoksikasi)",
+              "Pemeriksaan tanda dehidrasi",
+              "Pemeriksaan neurologis fokal"
+            ],
+            "expected_workup": [
+              "Gula darah sewaktu segera (point-of-care)",
+              "Elektrolit dan fungsi ginjal",
+              "Analisis gas darah bila curiga KAD",
+              "Respons klinis terhadap pemberian dextrose sebagai konfirmasi diagnostik-terapeutik"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "ENDO-001-SCT1",
+              "scenario_addition": "Gula darah sewaktu point-of-care terukur 32 mg/dL",
+              "hypothesis_tested": "Hipoglikemia Berat",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Gula darah sangat rendah adalah konfirmasi langsung diagnosis hipoglikemia"
+            },
+            {
+              "item_id": "ENDO-001-SCT2",
+              "scenario_addition": "Napas pasien berbau seperti aseton (buah-buahan) dan pola napas cepat dan dalam",
+              "hypothesis_tested": "Hipoglikemia Berat",
+              "expert_panel_modal_response": "-2",
+              "rationale": "Bau aseton dan napas Kussmaul adalah tanda klasik ketoasidosis diabetik, kebalikan dari hipoglikemia, sehingga harus mengarahkan kecurigaan ke KAD"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Tinggi - penurunan kesadaran pada pasien DM dengan riwayat insulin sangat klasik hipoglikemia, namun mahasiswa kadang tidak mengecek gula darah dan langsung berasumsi tanpa konfirmasi",
+            "anchoring_risk": "Sangat tinggi - begitu mendengar 'riwayat DM + insulin', mahasiswa sering tidak mempertimbangkan KAD sebagai kebalikan kondisi yang sama plausible"
+          }
+        },
+        {
+          "case_id": "ENDO-002",
+          "title": "Lemas, sering haus, dan sering kencing",
+          "difficulty": "basic",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Ny. L",
+            "age": 48,
+            "gender": "Perempuan",
+            "chief_complaint": "Sering merasa haus berlebihan, sering buang air kecil terutama malam hari, dan berat badan turun dalam 2 bulan terakhir",
+            "vital_signs": {
+              "blood_pressure": "125/80 mmHg",
+              "heart_rate": "88 x/menit",
+              "respiratory_rate": "18 x/menit",
+              "temperature": "36.6 C",
+              "spo2": "99%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Diabetes Mellitus Tipe 2 (Onset Baru)",
+            "enabling_conditions": [
+              "Usia >40 tahun",
+              "Obesitas atau overweight",
+              "Riwayat keluarga diabetes",
+              "Riwayat diabetes gestasional",
+              "Gaya hidup sedentari",
+              "Riwayat sindrom metabolik (hipertensi, dislipidemia)"
+            ],
+            "fault_pathophysiology": "Resistensi insulin pada jaringan perifer dikombinasikan dengan disfungsi progresif sel beta pankreas, menyebabkan hiperglikemia kronik yang melebihi ambang ginjal sehingga glukosa muncul di urin (glukosuria) dan menarik air secara osmotik.",
+            "consequences": {
+              "symptoms": [
+                "Poliuria (sering berkemih, terutama malam/nokturia)",
+                "Polidipsia (rasa haus berlebihan)",
+                "Polifagia dengan penurunan berat badan paradoksal",
+                "Kelelahan",
+                "Pandangan kabur intermiten",
+                "Luka yang lambat sembuh"
+              ],
+              "physical_signs": [
+                "Dapat tanpa temuan fisik signifikan pada tahap awal",
+                "Tanda dehidrasi ringan pada kasus dengan poliuria signifikan",
+                "Acanthosis nigricans (tanda resistensi insulin) pada beberapa kasus",
+                "Tanda neuropati perifer pada kasus yang sudah lama tidak terdiagnosis"
+              ],
+              "diagnostic_findings": [
+                "Gula darah puasa ≥126 mg/dL",
+                "Gula darah sewaktu ≥200 mg/dL dengan gejala klasik",
+                "HbA1c ≥6.5%",
+                "Tes toleransi glukosa oral abnormal"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Diabetes Insipidus",
+              "distinguishing_features": "Poliuria dan polidipsia tanpa hiperglikemia, urin sangat dilusi (berat jenis rendah)",
+              "relevance_note": "Penting dibedakan karena mekanisme dan tata laksana sama sekali berbeda meski gejala mirip"
+            },
+            {
+              "diagnosis": "Hipertiroidisme",
+              "distinguishing_features": "Penurunan berat badan dengan nafsu makan meningkat, disertai tremor, takikardia, dan intoleransi panas",
+              "relevance_note": "Dapat menyerupai gejala metabolik DM namun mekanisme berbeda total"
+            },
+            {
+              "diagnosis": "Keganasan Tersembunyi",
+              "distinguishing_features": "Penurunan berat badan progresif tanpa poliuria/polidipsia signifikan, gejala konstitusional lain",
+              "relevance_note": "Perlu dipertimbangkan terutama bila penurunan berat badan tidak proporsional dengan gejala DM lainnya"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan pola berkemih (frekuensi, volume, nokturia)",
+              "Menanyakan rasa haus dan jumlah minum per hari",
+              "Menanyakan perubahan berat badan dan nafsu makan",
+              "Menanyakan riwayat keluarga diabetes",
+              "Menanyakan riwayat diabetes gestasional (pada perempuan)",
+              "Menanyakan gejala penyerta tiroid (tremor, berdebar, intoleransi panas)",
+              "Menanyakan riwayat luka yang lambat sembuh"
+            ],
+            "physical_exam_items": [
+              "Pengukuran berat badan dan BMI",
+              "Pemeriksaan tanda dehidrasi",
+              "Pemeriksaan kulit untuk acanthosis nigricans",
+              "Pemeriksaan tiroid",
+              "Pemeriksaan kaki untuk skrining neuropati"
+            ],
+            "expected_workup": [
+              "Gula darah puasa dan sewaktu",
+              "HbA1c",
+              "Urinalisis untuk glukosuria",
+              "Fungsi tiroid bila dicurigai diferensial"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "ENDO-002-SCT1",
+              "scenario_addition": "Gula darah sewaktu 280 mg/dL dan HbA1c 9.2%",
+              "hypothesis_tested": "Diabetes Mellitus Tipe 2",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Nilai gula darah dan HbA1c yang jauh di atas ambang diagnostik mengonfirmasi diabetes mellitus"
+            },
+            {
+              "item_id": "ENDO-002-SCT2",
+              "scenario_addition": "Urinalisis menunjukkan berat jenis urin sangat rendah (1.001) tanpa glukosuria",
+              "hypothesis_tested": "Diabetes Mellitus Tipe 2",
+              "expert_panel_modal_response": "-2",
+              "rationale": "Urin sangat dilusi tanpa glukosuria mengarahkan ke diabetes insipidus, bukan diabetes mellitus yang seharusnya menunjukkan glukosuria"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sedang - trias poliuria-polidipsia-polifagia sangat klasik DM sehingga diabetes insipidus sering tidak dipertimbangkan",
+            "anchoring_risk": "Rendah - kasus ini relatif straightforward, namun mahasiswa pemula terkadang lupa mengeksplorasi gejala tiroid sebagai diferensial"
+          }
+        }
+      ]
+    },
+    {
+      "system": "Muskuloskeletal",
+      "system_code": "MSK",
+      "cases": [
+        {
+          "case_id": "MSK-001",
+          "title": "Nyeri sendi lutut bengkak mendadak",
+          "difficulty": "intermediate",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Tn. N",
+            "age": 52,
+            "gender": "Laki-laki",
+            "chief_complaint": "Nyeri dan bengkak mendadak pada ibu jari kaki kanan sejak semalam, sangat nyeri disentuh sedikit pun",
+            "vital_signs": {
+              "blood_pressure": "130/85 mmHg",
+              "heart_rate": "90 x/menit",
+              "respiratory_rate": "18 x/menit",
+              "temperature": "37.5 C",
+              "spo2": "98%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Artritis Gout Akut",
+            "enabling_conditions": [
+              "Riwayat hiperurisemia",
+              "Konsumsi alkohol berlebihan",
+              "Diet tinggi purin (jeroan, makanan laut)",
+              "Obesitas",
+              "Riwayat keluarga gout",
+              "Penggunaan diuretik thiazide"
+            ],
+            "fault_pathophysiology": "Deposisi kristal monosodium urat pada sendi akibat hiperurisemia kronik, memicu respons inflamasi akut yang menyebabkan nyeri hebat, kemerahan, dan pembengkakan sendi yang terkena, paling sering metatarsofalangeal pertama (podagra).",
+            "consequences": {
+              "symptoms": [
+                "Nyeri sendi onset mendadak, sering malam hari",
+                "Bengkak dan kemerahan pada sendi terkena",
+                "Nyeri sangat hebat bahkan dengan sentuhan ringan (allodynia)",
+                "Paling sering mengenai sendi metatarsofalangeal 1 (podagra)",
+                "Dapat disertai demam ringan"
+              ],
+              "physical_signs": [
+                "Sendi bengkak, eritema, hangat pada palpasi",
+                "Range of motion terbatas akibat nyeri",
+                "Tofus pada kasus gout kronik (deposit urat subkutan)"
+              ],
+              "diagnostic_findings": [
+                "Asam urat serum meningkat (namun dapat normal saat episode akut)",
+                "Aspirasi cairan sendi: kristal urat berbentuk jarum, birefringence negatif pada mikroskop polarisasi (gold standard)",
+                "Leukositosis ringan",
+                "Foto rontgen: erosi punch-out pada kasus kronik"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Artritis Septik",
+              "distinguishing_features": "Demam tinggi lebih prominent, biasanya monoartikular pada sendi besar (lutut), faktor risiko imunokompromais atau riwayat infeksi",
+              "relevance_note": "Diagnosis kritis yang wajib disingkirkan karena memerlukan drainase dan antibiotik segera untuk mencegah kerusakan sendi permanen"
+            },
+            {
+              "diagnosis": "Pseudogout (Artritis Pirofosfat)",
+              "distinguishing_features": "Lebih sering mengenai lutut atau pergelangan tangan, kristal pirofosfat birefringence positif",
+              "relevance_note": "Klinis sangat mirip gout, dibedakan via aspirasi sendi dan mikroskop polarisasi"
+            },
+            {
+              "diagnosis": "Selulitis",
+              "distinguishing_features": "Eritema lebih difus tanpa batas sendi yang jelas, tanpa keterbatasan gerak sendi spesifik",
+              "relevance_note": "Penting dibedakan karena tata laksana sangat berbeda (antibiotik topikal/sistemik vs anti-inflamasi)"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan onset dan progresivitas nyeri",
+              "Menanyakan lokasi sendi yang terkena",
+              "Menanyakan riwayat episode serupa sebelumnya",
+              "Menanyakan riwayat diet (alkohol, jeroan, makanan laut)",
+              "Menanyakan riwayat penggunaan diuretik",
+              "Menanyakan faktor risiko infeksi (luka, riwayat imunokompromais) untuk skrining artritis septik"
+            ],
+            "physical_exam_items": [
+              "Inspeksi sendi: bengkak, eritema, deformitas",
+              "Palpasi: hangat, nyeri tekan, krepitasi",
+              "Range of motion aktif dan pasif",
+              "Pencarian tofus pada lokasi khas (heliks telinga, siku)"
+            ],
+            "expected_workup": [
+              "Asam urat serum",
+              "Aspirasi cairan sendi dengan analisis kristal",
+              "Darah lengkap",
+              "Foto rontgen sendi terkena"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "MSK-001-SCT1",
+              "scenario_addition": "Aspirasi cairan sendi menunjukkan kristal berbentuk jarum dengan birefringence negatif pada mikroskop polarisasi",
+              "hypothesis_tested": "Artritis Gout Akut",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Temuan kristal urat dengan birefringence negatif adalah konfirmasi definitif gout"
+            },
+            {
+              "item_id": "MSK-001-SCT2",
+              "scenario_addition": "Pasien demam 39 C, sendi yang terkena adalah lutut kanan dengan riwayat luka tusuk paku 3 hari sebelumnya",
+              "hypothesis_tested": "Artritis Gout Akut",
+              "expert_panel_modal_response": "-2",
+              "rationale": "Demam tinggi dengan riwayat luka terbuka pada sendi besar sangat mengarahkan ke artritis septik yang merupakan kegawatan ortopedi"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sedang - nyeri sendi mendadak pada laki-laki paruh baya sering langsung diarahkan gout tanpa menyingkirkan artritis septik",
+            "anchoring_risk": "Tinggi - mahasiswa yang sudah curiga gout karena lokasi klasik (ibu jari kaki) sering tidak menanyakan faktor risiko infeksi"
+          }
+        }
+      ]
+    },
+    {
+      "system": "Obstetri & Ginekologi",
+      "system_code": "OBGYN",
+      "cases": [
+        {
+          "case_id": "OBGYN-001",
+          "title": "Nyeri perut bawah dan keterlambatan haid",
+          "difficulty": "advanced",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Ny. O",
+            "age": 27,
+            "gender": "Perempuan",
+            "chief_complaint": "Nyeri perut bawah kanan mendadak sejak 4 jam, disertai sedikit perdarahan vagina, terlambat haid 6 minggu",
+            "vital_signs": {
+              "blood_pressure": "95/60 mmHg",
+              "heart_rate": "115 x/menit",
+              "respiratory_rate": "20 x/menit",
+              "temperature": "36.8 C",
+              "spo2": "98%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Kehamilan Ektopik Terganggu",
+            "enabling_conditions": [
+              "Riwayat penyakit radang panggul (PID)",
+              "Riwayat kehamilan ektopik sebelumnya",
+              "Riwayat operasi tuba atau abdomen",
+              "Penggunaan IUD",
+              "Riwayat infertilitas dengan teknologi reproduksi berbantu",
+              "Riwayat merokok"
+            ],
+            "fault_pathophysiology": "Implantasi hasil konsepsi di luar kavum uteri (paling sering tuba fallopi) yang terus tumbuh hingga menyebabkan ruptur tuba atau abortus tuba, mengakibatkan perdarahan intraabdomen yang dapat mengancam jiwa.",
+            "consequences": {
+              "symptoms": [
+                "Terlambat haid / amenore",
+                "Nyeri perut bawah unilateral mendadak",
+                "Perdarahan vagina abnormal (spotting hingga sedang)",
+                "Tanda syok hipovolemik bila ruptur (pusing, pingsan, takikardia)",
+                "Nyeri bahu (akibat iritasi diafragma oleh darah intraabdomen) pada kasus berat"
+              ],
+              "physical_signs": [
+                "Nyeri tekan abdomen bawah, dapat disertai tanda peritoneal bila ruptur",
+                "Nyeri goyang serviks (cervical motion tenderness)",
+                "Massa adneksa pada pemeriksaan bimanual",
+                "Tanda syok: hipotensi, takikardia, akral dingin pada ruptur dengan perdarahan masif"
+              ],
+              "diagnostic_findings": [
+                "Beta-hCG urin/serum positif",
+                "USG transvaginal: tidak ada kantung gestasi intrauterin, massa adneksa, cairan bebas pelvis",
+                "Beta-hCG serum kuantitatif tidak sesuai usia gestasi yang diharapkan",
+                "Hemoglobin menurun bila ada perdarahan signifikan"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Abortus Iminens/Insipiens",
+              "distinguishing_features": "Kehamilan intrauterin terkonfirmasi USG, nyeri lebih kram di tengah bukan unilateral",
+              "relevance_note": "Penting dibedakan karena tata laksana berbeda total — abortus tidak memerlukan tindakan emergensi seperti ektopik terganggu"
+            },
+            {
+              "diagnosis": "Kista Ovarium Terpelintir (Torsio Ovarium)",
+              "distinguishing_features": "Tes kehamilan negatif, nyeri sangat hebat mendadak, massa adneksa pada USG tanpa tanda kehamilan",
+              "relevance_note": "Dibedakan terutama dari hasil tes kehamilan"
+            },
+            {
+              "diagnosis": "Apendisitis Akut",
+              "distinguishing_features": "Tidak ada riwayat terlambat haid, migrasi nyeri periumbilikal klasik, tes kehamilan negatif",
+              "relevance_note": "Wajib disingkirkan terutama bila nyeri di kanan, namun tes kehamilan adalah pembeda kunci"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan riwayat haid terakhir (HPHT) dan keteraturan siklus",
+              "Menanyakan kemungkinan kehamilan dan riwayat kontrasepsi",
+              "Menanyakan karakteristik dan jumlah perdarahan vagina",
+              "Menanyakan riwayat kehamilan ektopik atau PID sebelumnya",
+              "Menanyakan riwayat operasi abdomen/tuba sebelumnya",
+              "Menanyakan gejala syok (pusing, pingsan)",
+              "Menanyakan nyeri bahu (red flag perdarahan intraabdomen)"
+            ],
+            "physical_exam_items": [
+              "Penilaian tanda vital untuk skrining syok",
+              "Palpasi abdomen untuk tanda peritoneal",
+              "Pemeriksaan dalam (bila kompeten/sesuai indikasi): nyeri goyang serviks, massa adneksa",
+              "Penilaian akral dan tanda perfusi"
+            ],
+            "expected_workup": [
+              "Tes kehamilan (beta-hCG) segera — WAJIB pada semua perempuan usia reproduktif dengan nyeri perut",
+              "USG transvaginal/abdominal",
+              "Darah lengkap dan golongan darah",
+              "Beta-hCG kuantitatif serial bila diagnosis belum jelas"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "OBGYN-001-SCT1",
+              "scenario_addition": "Beta-hCG urin positif, USG transvaginal tidak menunjukkan kantung gestasi di dalam rahim, ditemukan massa adneksa kanan dengan cairan bebas di kavum Douglas",
+              "hypothesis_tested": "Kehamilan Ektopik Terganggu",
+              "expert_panel_modal_response": "+2",
+              "rationale": "Kombinasi tes kehamilan positif tanpa kehamilan intrauterin disertai massa adneksa dan cairan bebas adalah gambaran klasik kehamilan ektopik terganggu"
+            },
+            {
+              "item_id": "OBGYN-001-SCT2",
+              "scenario_addition": "Tes kehamilan negatif, namun pasien tetap mengalami nyeri hebat mendadak dengan massa adneksa pada USG",
+              "hypothesis_tested": "Kehamilan Ektopik Terganggu",
+              "expert_panel_modal_response": "-2",
+              "rationale": "Tes kehamilan negatif secara praktis menyingkirkan kehamilan ektopik dan mengarahkan ke diferensial lain seperti torsio ovarium"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sangat tinggi - nyeri perut pada perempuan usia reproduktif sering tidak disertai tes kehamilan rutin sehingga ektopik terlewat",
+            "anchoring_risk": "Sangat tinggi - bila mahasiswa sudah fokus ke kemungkinan apendisitis karena lokasi nyeri kanan, riwayat haid terakhir sering tidak ditanyakan"
+          }
+        }
+      ]
+    },
+    {
+      "system": "Psikiatri",
+      "system_code": "PSI",
+      "cases": [
+        {
+          "case_id": "PSI-001",
+          "title": "Perubahan perilaku dan mood pada mahasiswa",
+          "difficulty": "intermediate",
+          "station_duration_minutes": 10,
+          "patient_presentation": {
+            "name_placeholder": "Sdri. P",
+            "age": 20,
+            "gender": "Perempuan",
+            "chief_complaint": "Merasa sedih berkepanjangan, kehilangan minat pada aktivitas yang biasa disukai, dan kesulitan tidur sejak 3 minggu",
+            "vital_signs": {
+              "blood_pressure": "110/70 mmHg",
+              "heart_rate": "78 x/menit",
+              "respiratory_rate": "16 x/menit",
+              "temperature": "36.6 C",
+              "spo2": "99%"
+            }
+          },
+          "illness_script": {
+            "primary_diagnosis": "Episode Depresif Mayor",
+            "enabling_conditions": [
+              "Riwayat keluarga gangguan mood",
+              "Stresor psikososial signifikan (akademik, hubungan, finansial)",
+              "Riwayat episode depresif sebelumnya",
+              "Jenis kelamin perempuan (prevalensi lebih tinggi)",
+              "Kurangnya dukungan sosial"
+            ],
+            "fault_pathophysiology": "Disregulasi neurotransmiter monoamine (serotonin, norepinefrin, dopamin) di sistem limbik yang dipengaruhi faktor genetik, neurobiologis, dan psikososial, menyebabkan gangguan mood, kognisi, dan fungsi neurovegetatif yang persisten.",
+            "consequences": {
+              "symptoms": [
+                "Mood depresif hampir setiap hari selama minimal 2 minggu",
+                "Anhedonia (kehilangan minat/kesenangan)",
+                "Gangguan tidur (insomnia atau hipersomnia)",
+                "Perubahan nafsu makan/berat badan",
+                "Kelelahan atau kehilangan energi",
+                "Perasaan tidak berharga atau bersalah berlebihan",
+                "Kesulitan konsentrasi",
+                "Pikiran tentang kematian atau ide untuk mengakhiri hidup (wajib ditanyakan secara langsung)"
+              ],
+              "physical_signs": [
+                "Psikomotor melambat atau gelisah (retardasi/agitasi psikomotor)",
+                "Afek depresif, kontak mata kurang",
+                "Penampilan kurang terawat pada kasus berat"
+              ],
+              "diagnostic_findings": [
+                "Diagnosis klinis berdasarkan kriteria DSM-5/PPDGJ-III (bukan dari pemeriksaan penunjang)",
+                "Skrining dengan instrumen seperti PHQ-9 atau Hamilton Depression Rating Scale",
+                "Pemeriksaan tiroid (TSH) untuk menyingkirkan hipotiroid sebagai penyebab sekunder",
+                "Skrining penggunaan zat"
+              ]
+            }
+          },
+          "differential_diagnoses": [
+            {
+              "diagnosis": "Hipotiroidisme",
+              "distinguishing_features": "Gejala fisik menyertai seperti intoleransi dingin, kulit kering, konstipasi; TSH meningkat",
+              "relevance_note": "Wajib disingkirkan dengan pemeriksaan fungsi tiroid sebelum menegakkan diagnosis psikiatri primer"
+            },
+            {
+              "diagnosis": "Gangguan Penyesuaian dengan Mood Depresif",
+              "distinguishing_features": "Onset jelas terkait stresor spesifik, durasi gejala lebih singkat, tidak memenuhi kriteria penuh episode depresif mayor",
+              "relevance_note": "Penting dibedakan untuk menentukan pendekatan terapi yang sesuai"
+            },
+            {
+              "diagnosis": "Episode Depresif dalam Gangguan Bipolar",
+              "distinguishing_features": "Riwayat episode manik/hipomanik sebelumnya yang harus ditanyakan secara spesifik",
+              "relevance_note": "Krusial dibedakan karena pemberian antidepresan tunggal pada bipolar dapat memicu switching ke episode manik"
+            }
+          ],
+          "osce_checklist": {
+            "anamnesis_items": [
+              "Menanyakan durasi dan kualitas mood depresif",
+              "Menanyakan anhedonia secara spesifik",
+              "Menanyakan gangguan tidur, nafsu makan, dan energi",
+              "Menanyakan ide bunuh diri secara langsung dan tidak menghakimi (WAJIB, bukan opsional)",
+              "Menanyakan riwayat episode manik/hipomanik sebelumnya (skrining bipolar)",
+              "Menanyakan gejala fisik yang mengarah ke hipotiroid",
+              "Menanyakan stresor psikososial yang relevan",
+              "Menanyakan riwayat penggunaan zat/alkohol"
+            ],
+            "physical_exam_items": [
+              "Observasi penampilan dan kontak mata",
+              "Penilaian psikomotor (retardasi atau agitasi)",
+              "Penilaian afek dan mood secara klinis",
+              "Pemeriksaan fisik umum untuk skrining penyebab organik"
+            ],
+            "expected_workup": [
+              "Skrining menggunakan PHQ-9 atau instrumen serupa",
+              "TSH dan fungsi tiroid",
+              "Darah lengkap (skrining anemia sebagai penyebab kelelahan)",
+              "Skrining penggunaan zat bila dicurigai"
+            ]
+          },
+          "sct_items": [
+            {
+              "item_id": "PSI-001-SCT1",
+              "scenario_addition": "Pasien mengaku memiliki pikiran ingin mengakhiri hidup namun belum ada rencana konkret, dan menyangkal pernah mengalami periode energi sangat tinggi dengan kebutuhan tidur berkurang",
+              "hypothesis_tested": "Episode Depresif Mayor",
+              "expert_panel_modal_response": "+1",
+              "rationale": "Ide bunuh diri tanpa riwayat episode manik mendukung episode depresif mayor unipolar, namun temuan ide bunuh diri mengubah urgensi tata laksana menjadi prioritas tinggi"
+            },
+            {
+              "item_id": "PSI-001-SCT2",
+              "scenario_addition": "Pemeriksaan fisik menunjukkan kulit kering, intoleransi dingin, dan TSH meningkat signifikan",
+              "hypothesis_tested": "Episode Depresif Mayor",
+              "expert_panel_modal_response": "-2",
+              "rationale": "Temuan klinis dan laboratorium yang konsisten hipotiroid mengarahkan ke depresi sekunder akibat hipotiroidisme, bukan episode depresif primer"
+            }
+          ],
+          "common_bias_triggers": {
+            "premature_closure_risk": "Sedang - gejala depresi klasik pada mahasiswa sering langsung disimpulkan tanpa skrining riwayat manik atau penyebab organik",
+            "anchoring_risk": "Tinggi - banyak mahasiswa kedokteran ragu atau lupa menanyakan ide bunuh diri secara langsung karena merasa tidak nyaman, padahal ini item anamnesis wajib"
+          }
+        }
+      ]
+    }
+  ]
+}
